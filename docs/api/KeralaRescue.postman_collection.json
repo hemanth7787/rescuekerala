@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "253041c8-1762-4269-838d-03e36aff6e96",
+		"name": "KeralaRescue",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Obtain Token (Auth)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "admin",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/api-token-auth/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"api-token-auth",
+						""
+					]
+				},
+				"description": "Obtain token for authorizing POST requests to server"
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE Request (POST)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 7cffe4ffaee1158ba2061b6a2dd87168a056f3dd"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8000/api/requests/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"requests",
+						""
+					]
+				},
+				"description": "Create a new rescue request. \n\nAuth:\nProvide authorization in header with a valid token"
+			},
+			"response": []
+		},
+		{
+			"name": "LIST  Request (GET)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8000/api/requests/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"requests",
+						""
+					]
+				},
+				"description": "Get details of rescue requests"
+			},
+			"response": []
+		},
+		{
+			"name": "RETRIEVE  Request (GET)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8000/api/requests/1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"requests",
+						"1",
+						""
+					]
+				},
+				"description": "Get detail of a rescue requests <id>"
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE  Request (UPDATE)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 7cffe4ffaee1158ba2061b6a2dd87168a056f3dd"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8000/api/requests/1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"requests",
+						"1",
+						""
+					]
+				},
+				"description": "Update detail of a rescue requests <id>"
+			},
+			"response": []
+		},
+		{
+			"name": "PARTIAL UPDATE  Request (PATCH)",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 7cffe4ffaee1158ba2061b6a2dd87168a056f3dd"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8000/api/requests/1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"requests",
+						"1",
+						""
+					]
+				},
+				"description": "Partial update of a rescue requests <id>"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE  Request (DELETE)",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 7cffe4ffaee1158ba2061b6a2dd87168a056f3dd"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8000/api/requests/1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"requests",
+						"1",
+						""
+					]
+				},
+				"description": "DELETE a rescue requests <id>"
+			},
+			"response": []
+		}
+	]
+}
