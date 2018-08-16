@@ -65,6 +65,8 @@ INSTALLED_APPS = [
     'bootstrap3',
     'django_filters',
     'raven.contrib.django.raven_compat',
+    'rest_framework',
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
@@ -185,3 +187,9 @@ STATICFILES_DIRS = (
 )
 
 ADMIN_SITE_HEADER = "Keralarescue Dashboard"
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    )
+}

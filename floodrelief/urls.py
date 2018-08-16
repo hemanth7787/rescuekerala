@@ -22,4 +22,5 @@ admin.site.site_header = settings.ADMIN_SITE_HEADER
 urlpatterns = [
     path('', include('mainapp.urls')),
     path('admin/', admin.site.urls),
+    path('api/', include('mainapp.api_urls')),
 ]
